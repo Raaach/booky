@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+	box-sizing: border-box; 
+	font-family: 'Raleway', sans-serif;
+}
+body{
+	margin: auto;
+	max-width: 1700px;
+
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+/* navbar */
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	padding-left: 32px;
+}
+nav a{
+	border-top: 3px solid transparent;
+	padding: 32px; 
+}
+nav a:hover{
+	font-weight: bold;
+	border-top-color: #0065FC;
+	color: #0065FC;
+}
+#logo{
+	margin-right: auto 
+}
+
+.lien_nav{
+	display: flex;
+}
+/* body */
+.wrapper{
+	padding: 0 32px;
+}
+.wrapper h1,
+.wrapper p{
+	margin-bottom: 16px;
+}
+/*search_form*/
+.search_form>*{ 
+	padding: 16px 24px;
+	font-size: 19px;
+}
+.search_form{
+	display: flex;
+	align-items: center;
+	font-size: 19px;
+}
+.search_form i{
+	background-color: #F2F2F2;
+	border-radius: 16px 0 0 16px;
+}
+.search_form input{
+	flex-basis: 256px;
+	border: 1px solid #F2F2F2;
+	overflow: auto;
+}
+
+.search_form button{
+	background-color: #0065FC;
+	color: white;
+	font-size: 16px;
+	border-radius: 0 16px 16px 0;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+	transition: transform 200ms;
+}
+.search_form button:hover{
+	opacity: 1;
+	transform: scale(1.04);
+}
+.fas.fa-search{
+	display: none;
+}
+/* filtres */
+.liste_filtre{
+	display: flex;
+	align-items: center;
+	grid-gap: 24px 32px;
+	flex-wrap: wrap;
+	margin-bottom: 8px;
+}
+
+.filtre .fas{
+	color: #0065FC;
+	background-color: #DEEBFF;
+	border-radius: 50%;
+	margin: -2px;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.filtre:hover{
+	transform: scale(1.02);
+}
+.filtre{
+	border: 2px solid #F2F2F2;
+	border-radius: 32px;
+	display: flex;
+	align-items: center;
+	transition: all 200ms;
+}
+.filtre span{
+	font-weight: bold;
+	padding: 0 16px;
+}
+
+/* info  */
+.info{
+	display: flex;
+	align-items: center;
+	grid-gap:16px;
+}
+.info .fas{
+	color: #0065FC;
+	width: 32px;
+	height: 32px;
+	border: 1px solid #DEEBFF;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*effet carte-apart*/
+.carte-apart:hover{
+	transform: scale(1.02);
+	transition: all 200ms;
+}
+
+/* hebergement */
+.liste_apart{
+	display: flex;
+	grid-gap: 16px;
+}
+
+
+.liste_apart>div{
+	background-color: #F2F2F2;
+	padding: 16px;
+	border-radius: 16px;
+	margin-bottom: 30px;
+}
+.liste_apart #hebergement{
+	flex-basis: 66%;
+}
+.liste_apart .populaire{
+	flex-basis: 33%;
+}
+/* liste des hebergements à marseillle*/
+#hebergement a{
+	font-weight: bold;
+}
+.liste_marseille{
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 16px;
+	justify-content: space-around;
+	margin-bottom: 16px;
+}
+.liste_marseille div{
+	flex-basis: 27%;
+}
+.liste_populaire{
+	display: flex;
+	flex-direction: column;
+	grid-gap: 16px;
+	margin-bottom: 16px;
+	flex-basis: 100%;
+	justify-content: space-evenly;
+}
+
+/* carte apart */
+.bleu{
+	color: #0065FC;
+}
+.gris{
+	color: #F2F2F2;
+}
+.carte-apart{
+	background-color: white;
+	border-radius: 16px;
+	padding: 8px;
+	box-shadow: 0 0 16px #0000002e;
+	flex-grow: 1;
+	min-width: 240px;
+}
+.carte-apart img{
+	border-radius: 16px 16px 0 0;
+	height: 144px;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.carte-apart p,
+.carte-apart h3,
+.description_pop p,
+.description_pop h3{
+	margin: 3.2px;
+	flex-wrap: wrap;
+}
+/*carte populiare*/
+.populaire{
+	display: flex;
+	flex-direction: column;
+}
+.carte-populaire{
+	display: flex;
+	min-width: 272px;
+	max-height: 160px;
+}
+.carte-populaire img{
+	height: auto;
+	border-radius: 16px 0 0 16px;
+	width: 40%;
+	margin-right: 8px;
+}
+.description_pop{
+	flex-basis: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.description_pop .etoile_pop{
+	margin-top: auto;
+}
+.populaire h3{
+	display: flex;
+	justify-content: space-between;
+}
+.hebergement h3, .populaire h3{
+	margin-top: 8px;
+}
+
+
+
+/*activtés*/
+#liste_activites{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 320px));
+	grid-template-rows: repeat(5,1fr);
+	grid-gap: 16px;
+	grid-auto-rows: minmax(400px,auto);
+	margin-bottom: 35px;
+	justify-content: center;
+}
+#liste_activites>*{
+	background-position: center;
+	background-size: cover;
+ 	display: flex;
+	border-radius: 20.8px;
+	box-shadow: rgba(0,0,0,0.3) 0px 3px 8px;
+	transition: all 200ms;
+}
+
+#liste_activites>div:hover{
+	transform: scale(1.02);
+}
+.grande{
+	grid-row: 1 / -1;
+	background-image: url(images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+
+}
+ .grande1{
+ 	grid-column: 3/4;
+ 	grid-row: 1/-1;
+ 	background-image: url(images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+ }
+
+ .moyenne{
+ 	grid-row: 1/span 3;
+ 	background-image: url(images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+ }
+ .moyenne1{
+ 	grid-column: 4/-1;
+ 	grid-row: 3/-1;
+ 	background-image: url(images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+ }
+ .petite1{
+ 	grid-column: 4/-1;
+ 	grid-row: 1/3;
+ 	background-image: url(images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+ }
+ .petite{
+ 	grid-row: 4/-1;
+ 	grid-column: 2/3;
+ 	background-image: url(images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+ }
+  .big{
+ 	height: 560px;
+ }
+ #liste_activites h3{
+ 	background-color: white;
+ 	margin-top: auto;
+ 	margin-bottom: 0;
+ 	width: 100%;
+ 	padding: 12.8px;
+ 	border-radius: 0 0 20.8px 20.8px;
+ }
+
+footer{
+	display: flex;
+	padding: 32px;
+	width: 100%;
+	background-color: #F2F2F2;
+}
+.liste_foot{
+	flex-basis: 33%;
+	margin-top: 16px;
+	height: 180px;
+}
+.liste_foot h3{
+	font-weight: bold;
+	margin-bottom: -3px;
+}
+footer ul{
+	list-style-type: none;
+	padding-left: 0;
+}
+footer li{
+	padding: 8px 0 8px 0;
+
+}
+
+
+@media (max-width: 1000px){
+	.wrapper{
+		padding: 0 15px;
+	}
+	.lien_nav{
+		width: 100%;
+	}
+	.lien_nav a{
+		flex-basis: 50%;
+		text-align: center;
+		border-bottom: 3px solid #F2F2F2;
+	}
+	.lien_nav a:hover{
+		border-bottom: solid #0065FC;
+		border-top: transparent;
+	}
+	nav{
+		padding: 0;
+	}
+	.search_form .search_text{
+		display: none;
+	}
+	.liste_filtre{
+		flex-direction: column;
+	}
+	.fas.fa-search{
+		background-color: inherit;
+		display: inline;
+	}
+	.liste_apart {
+		flex-direction: column-reverse;
+	}
+	.liste_populiare{
+		flex-direction: row;
+		flex-direction: column;
+	}
+	.liste_marseille{
+		flex-direction: row;
+		flex-direction: column;
+	}
+	#hebergement{
+		background-color: white;
+	}
+	#liste_activites>*{
+		grid-column: span 1;
+		grid-row: span 1;
+		height: 178px;
+	}
+	#liste_activites{
+		grid-template-rows: none;
+		grid-auto-rows: minmax(177px, auto);
+		grid-template-columns: minmax(160px, 370px);
+	}
+
+	footer{
+		flex-direction: column;
+	}
+}
